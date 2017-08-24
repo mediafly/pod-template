@@ -1,3 +1,6 @@
+## Attention
+This is adapted for Mediafly internal cocoapods. Feel free to get inspiration or see how we differ from `CocoaPods/pod-template`
+
 pod-template
 ============
 
