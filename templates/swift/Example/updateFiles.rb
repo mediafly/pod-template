@@ -12,6 +12,6 @@ File.open('.gitignore', 'w') do |fo|
   fo.write open("https://raw.githubusercontent.com/mediafly/ios-template-files/master/.gitignore").read 
 end
 
-File.open('.swiftlint', 'w') do |fo|
-  fo.write open("https://raw.githubusercontent.com/mediafly/ios-template-files/master/.swiftlint").read 
+File.open('.swiftlint.yml', 'w') do |fo|
+  fo.write open("https://raw.githubusercontent.com/mediafly/ios-template-files/master/.swiftlint.yml").read 
 end
