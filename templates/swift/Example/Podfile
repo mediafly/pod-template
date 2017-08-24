@@ -1,8 +1,14 @@
+platform :ios, '9.0'
 use_frameworks!
+
+# Pod spec repos
+source 'https://github.com/CocoaPods/Specs.git'
+source 'git@bitbucket.org:mediafly-team/mediafly-podspec-repo.git'
 
 target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
-
+  pod 'SwiftLint'
+  
   target '${POD_NAME}_Tests' do
     inherit! :search_paths
 
