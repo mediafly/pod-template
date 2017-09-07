@@ -62,9 +62,9 @@ module Pod
       puts ""
 
       puts " Ace! you're ready to go!"
-      puts " We will start you off by opening your project in Xcode"
-      pod_name = @configurator.pod_name
-      run_command "open 'Example/#{pod_name}.xcworkspace'", "open '#{pod_name}/Example/#{pod_name}.xcworkspace'"
+#       puts " We will start you off by opening your project in Xcode"
+#       pod_name = @configurator.pod_name
+#       run_command "open 'Example/#{pod_name}.xcworkspace'", "open '#{pod_name}/Example/#{pod_name}.xcworkspace'"
     end
 
 
