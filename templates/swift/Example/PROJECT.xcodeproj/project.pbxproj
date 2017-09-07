@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		D8BC9ABE1F61A587003910D6 /* UpdateFiles */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D8BC9AC11F61A587003910D6 /* Build configuration list for PBXAggregateTarget "UpdateFiles" */;
+			buildPhases = (
+				D8BC9AC21F61A592003910D6 /* Update Files Script */,
+			);
+			dependencies = (
+			);
+			name = UpdateFiles;
+			productName = UpdateFile;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -128,7 +142,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PROJECT_Example" */;
 			buildPhases = (
-				D8A0A9591F4F57F100F95454 /* Update Files */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
@@ -180,6 +193,11 @@
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
+					D8BC9ABE1F61A587003910D6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JLYZJJEPC6;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "PROJECT" */;
@@ -197,6 +215,7 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* PROJECT_Example */,
 				607FACE41AFB9204008FA782 /* PROJECT_Tests */,
+				D8BC9ABE1F61A587003910D6 /* UpdateFiles */,
 			);
 		};
 /* End PBXProject section */
@@ -236,14 +255,14 @@
 			shellPath = /bin/sh;
 			shellScript = "cd ..\n\n${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n${PODS_ROOT}/SwiftLint/swiftlint";
 		};
-		D8A0A9591F4F57F100F95454 /* Update Files */ = {
+		D8BC9AC21F61A592003910D6 /* Update Files Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Update Files";
+			name = "Update Files Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +460,22 @@
 			};
 			name = Release;
 		};
+		D8BC9ABF1F61A587003910D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = JLYZJJEPC6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D8BC9AC01F61A587003910D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = JLYZJJEPC6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -470,6 +505,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D8BC9AC11F61A587003910D6 /* Build configuration list for PBXAggregateTarget "UpdateFiles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8BC9ABF1F61A587003910D6 /* Debug */,
+				D8BC9AC01F61A587003910D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

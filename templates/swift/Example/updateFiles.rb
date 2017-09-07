@@ -2,16 +2,21 @@ require "open-uri"
 
 Dir.chdir("..")
 
-File.open('version.sh', 'w') do |fo|
-  fo.write open("https://raw.githubusercontent.com/mediafly/ios-template-files/master/version.sh").read 
+def updateFile(url, file)
+  begin
+    content = open(url).read
+    File.open(file, 'w') do |fo|
+      fo.write content
+    end
+    if file.end_with?(".sh") == true
+      command = "chmod 755 #{file}"
+      system(command)
+    end
+  rescue Exception => ex
+    puts ex
+  end
 end
-command = "chmod 755 version.sh"
-system(command)
 
-File.open('.gitignore', 'w') do |fo|
-  fo.write open("https://raw.githubusercontent.com/mediafly/ios-template-files/master/.gitignore").read 
-end
-
-File.open('.swiftlint.yml', 'w') do |fo|
-  fo.write open("https://raw.githubusercontent.com/mediafly/ios-template-files/master/.swiftlint.yml").read 
+[".swiftlint.yml", ".gitignore", "version.sh"].each do |f| 
+  updateFile("https://raw.githubusercontent.com/mediafly/ios-template-files/master/#{f}", f)
 end
