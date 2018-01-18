@@ -1,7 +1,5 @@
 require "open-uri"
 
-Dir.chdir("..")
-
 def updateFile(url, file)
   begin
     content = open(url).read
@@ -17,6 +15,18 @@ def updateFile(url, file)
   end
 end
 
+["updateFiles.rb"].each do |f| 
+  updateFile("https://raw.githubusercontent.com/mediafly/ios-template-files/master/#{f}", f)
+end
+
+Dir.chdir("..")
+
 [".swiftlint.yml", ".gitignore", "version.sh"].each do |f| 
+  updateFile("https://raw.githubusercontent.com/mediafly/ios-template-files/master/#{f}", f)
+end
+
+Dir.chdir(".git/hooks/")
+
+["prepare-commit-msg"].each do |f| 
   updateFile("https://raw.githubusercontent.com/mediafly/ios-template-files/master/#{f}", f)
 end
